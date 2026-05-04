@@ -24,7 +24,7 @@ This project demonstrates the **Triangle of Quantum Security**, a holistic appro
 **Analysis**: The "Triangle" architecture combines three layers of defense.
 *   **QRNG** is the foundation, providing the entropy (randomness) needed for strong keys.
 *   **PQC** provides the mathematical algorithmic layer, protecting data even if intercepted and stored for future quantum decryption ("harvest now, decrypt later").
-*   **QKD** adds the physical layer security, ensuring that any attempt to eavesdrop on the key exchange is detected by the laws of quantum mechanics (No-Cloning Theorem).
+*   **QKD** adds the physical layer security. In this implementation, the QKD secret key is used to encrypt the PQC payload, ensuring that the quantum-resistant exchange itself is protected by information-theoretic security. Any attempt to eavesdrop on the payload transmission is detected by the laws of quantum mechanics (No-Cloning Theorem).
 
 ### 2. Quantum Random Number Generator (QRNG)
 The process of generating true randomness using quantum superposition.
