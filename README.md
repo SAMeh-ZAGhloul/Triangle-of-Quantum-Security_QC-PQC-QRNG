@@ -26,7 +26,28 @@ This project demonstrates the **Triangle of Quantum Security**, a holistic appro
 *   **PQC** provides the mathematical algorithmic layer, protecting data even if intercepted and stored for future quantum decryption ("harvest now, decrypt later").
 *   **QKD** adds the physical layer security. In this implementation, the QKD secret key is used to encrypt the PQC payload, ensuring that the quantum-resistant exchange itself is protected by information-theoretic security. Any attempt to eavesdrop on the payload transmission is detected by the laws of quantum mechanics (No-Cloning Theorem).
 
-### 2. Quantum Random Number Generator (QRNG)
+## 📊 Visualizations and Analysis
+
+### 1. Unified Architecture
+
+![Triangle of Quantum Security](./images/triangle_quantum_security.png)
+**Analysis**: The "Triangle" architecture combines three layers of defense.
+*   **QRNG** is the foundation, providing the entropy (randomness) needed for strong keys.
+*   **PQC** provides the mathematical algorithmic layer, protecting data even if intercepted and stored for future quantum decryption ("harvest now, decrypt later").
+*   **QKD** adds the physical layer security. In this implementation, the QKD secret key is used to encrypt the PQC payload, ensuring that the quantum-resistant exchange itself is protected by information-theoretic security. Any attempt to eavesdrop on the payload transmission is detected by the laws of quantum mechanics (No-Cloning Theorem).
+
+### 2. Risk & Readiness Assessment Tools
+
+The project includes two interactive assessment frameworks for organizational quantum transition:
+
+*   **QSRI (Quantum Security Readiness Index)**: `QSRI_Quantum-Security-Readiness-Index.html`
+    - Quantifies organizational preparedness across 8 critical dimensions (e.g., Policy, Crypto Agility, Supply Chain).
+    - Uses weighted maturity levels (0-5) to calculate a readiness score and visualizes gaps via a maturity radar chart.
+*   **QARS (Quantum-Adjusted Risk Score)**: `QARS_Quantum-Adjusted-Risk-Score.html`
+    - Provides asset-level risk quantification using the Mosca Inequality ($X + Y << Z Z$).
+    - Calculates risk based on Data Shelf-Life ($X$), Migration Timeline ($Y$), and Threat Horizon ($Z$), integrated with a Cryptographic Bill of Materials (CBOM).
+
+### 3. Quantum Random Number Generator (QRNG)
 The process of generating true randomness using quantum superposition.
 
 ```mermaid
